@@ -24,3 +24,29 @@
         </div>
     </div>
 </article>
+
+<!-- PAGER - NEXT / PREVIUS POST -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <ul class="pager">
+        	<?php
+                $pager = $_DB_POST->prev_next_post($post['id']);
+        		if($pager['next']!=false)
+        		{
+        			$post = $pager['next'];
+
+        			echo '<li class="next"><a href="'.Post::permalink().'">'.Post::title().' →</a></li>';
+        		}
+
+        		if($pager['prev']!=false)
+        		{
+        			$post = $pager['prev'];
+
+        			echo '<li class="previous"><a href="'.Post::permalink().'">← '.Post::title().'</a></li>';
+        		}
+        	?>
+            </ul>
+        </div>
+    </div>
+</div>
