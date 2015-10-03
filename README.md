@@ -7,6 +7,11 @@ So far the only supported Nibbleblog plugin is Pages. There is no support for co
 
 Have a look at the [original license](https://github.com/IronSummitMedia/startbootstrap-clean-blog/blob/gh-pages/LICENSE).
 
+Features
+--------
+- A post's description is shown as a sub-heading
+- To make an image responsive add this to its source in the editor: class="img-responsive"
+
 Install
 -------
 1. Download zip and unpack
