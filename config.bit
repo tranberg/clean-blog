@@ -4,7 +4,7 @@ $theme = array
 (
 	'name'=>'Clean Blog',
 	'description'=>'Clean blog is a carefully styled Bootstrap blog theme that is perfect for personal or company blogs. Adapted from Start Bootstrap for Nibbleblog.',
-	'notes'=>'Responsive. No support for comments, tags, and categories',
+	'notes'=>'Responsive. No support for comments, tags, and categories. Only support for Pages plugin.',
 	'author'=>'Bo Tranberg',
 	'version'=>'1.0',
 	'last_update'=>'03/10/2015',
