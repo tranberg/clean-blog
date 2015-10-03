@@ -51,14 +51,17 @@
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     			<ul class="nav navbar-nav navbar-right">
     				<?php
-                    // Insert links to Home and pages in the top of all pages, if Pages plugin is installed.
 					if(isset($plugins_by_name['pages']))
 					{
-                		$html .= '<li><a href="'.HTML_PATH_ROOT.'">'.$Language->get('home').'</a></li>';
-                		foreach($pages as $page)
+                        global $pages;
+                		global $Language;
+                		global $settings;
+
+                		$html .= '<li><a href="'.$settings["path"].'">'.$Language->get('home').'</a></li>';
+                		foreach($pages as $pagelink)
                 		{
-                			if($settings['default_homepage']!=$page['id']) {
-                				$html .= '<li><a href="'.$page['permalink'].'">'.$page['title'].'</a></li>';
+                			if($settings['default_homepage']!=$pagelink['id']) {
+                				$html .= '<li><a href="'.$pagelink['permalink'].'">'.$pagelink['title'].'</a></li>';
                             }
                 		}
                         echo $html;
