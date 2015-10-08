@@ -1,7 +1,7 @@
 Clean Blog
 ==========
 
-**Clean Blog** is a minimalist Bootstrap theme originally made by [Start Bootstrap](http://startbootstrap.com/template-overviews/clean-blog/), which has now been adapted for [Nibbleblog](https://github.com/dignajar/nibbleblog).
+**Clean Blog** is a minimalist Bootstrap theme originally made by [Start Bootstrap](http://startbootstrap.com/template-overviews/clean-blog/), which has now been adapted for [Nibbleblog](https://github.com/dignajar/nibbleblog). See it in action [here](http://tberg.dk).
 
 So far the only supported Nibbleblog plugin is Pages. There is no support for comments, tags, and categories.
 
