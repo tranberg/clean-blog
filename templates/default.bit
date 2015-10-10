@@ -57,7 +57,7 @@
                         global $Language;
                         global $settings;
 
-                        $html .= '<li><a href="'.$settings["path"].'">'.$Language->get('home').'</a></li>';
+                        $html = '<li><a href="'.$settings["path"].'">'.$Language->get('home').'</a></li>';
                         foreach($pages as $pagelink)
                         {
                             if($settings['default_homepage']!=$pagelink['id']) {
