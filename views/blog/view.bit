@@ -18,46 +18,46 @@
 // There are no posts
 if(empty($posts))
 {
-	echo '<p>'.$Language->get('there are no posts').'</p>';
+    echo '<p>'.$Language->get('there are no posts').'</p>';
 }
 else
 {
-	echo '<div class="container">';
+    echo '<div class="container">';
     echo '<div class="row">';
     echo '<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">';
-	// Print each post
-	foreach($posts as $post)
-	{
-		// Include the post link for each post
-?>
-	<div class="post-preview">
-		<a href="<?php echo Post::permalink() ?>">
-			<?php
-			if($post['type']=='quote')
-			{
-				echo '<h2 class="post-title">'.$_LANG['QUOTE'].'</h2>';
-			}
-			?>
+    // Print each post
+    foreach($posts as $post)
+    {
+    // Include the post link for each post
+    ?>
+        <div class="post-preview">
+            <a href="<?php echo Post::permalink() ?>">
+                <?php
+                if($post['type']=='quote')
+                {
+                    echo '<h2 class="post-title">'.$_LANG['QUOTE'].'</h2>';
+                }
+                ?>
 
-			<h2 class="post-title"><?php echo Post::title() ?></h2>
-			<h3 class="post-subtitle"><?php echo Post::description() ?></h3>
-		</a>
-		<p class="post-meta"><?php echo Post::published() ?></p>
-	</div>
-	<hr>
-<?php
-	}
+                <h2 class="post-title"><?php echo Post::title() ?></h2>
+                <h3 class="post-subtitle"><?php echo Post::description() ?></h3>
+            </a>
+            <p class="post-meta"><?php echo Post::published() ?></p>
+        </div>
+        <hr>
+    <?php
+    }
 }
 ?>
 
 <!-- Pager -->
 <ul class="pager">
-	<li class="previous">
-		<?php echo Pager::prev_link() ?>
-	</li>
-	<li class="next">
-		<?php echo Pager::next_link() ?>
-	</li>
+    <li class="previous">
+        <?php echo Pager::prev_link() ?>
+    </li>
+    <li class="next">
+        <?php echo Pager::next_link() ?>
+    </li>
 </ul>
 </div>
 </div>

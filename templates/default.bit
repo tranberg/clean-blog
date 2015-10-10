@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php
     // Charset, title, description, keywords, robots, etc
-	echo Blog::meta_tags();
+    echo Blog::meta_tags();
 
-	// Include CSS from theme
-	echo Blog::css(array('bootstrap.min.css', 'clean-blog.min.css'));
+    // Include CSS from theme
+    echo Blog::css(array('bootstrap.min.css', 'clean-blog.min.css'));
 
-	// Include Favicon, default path: themes/css/img/favicon.ico
-	echo Blog::favicon();
+    // Include Favicon, default path: themes/css/img/favicon.ico
+    echo Blog::favicon();
 
-	// Plugins for <head></head>
-	foreach($plugins as $plugin)
-	{
-		echo $plugin->blog_head();
-	}
+    // Plugins for <head></head>
+    foreach($plugins as $plugin)
+    {
+        echo $plugin->blog_head();
+    }
 ?>
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -35,43 +35,43 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    	<div class="container-fluid">
-    		<!-- Brand and toggle get grouped for better mobile display -->
-    		<div class="navbar-header page-scroll">
-    			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-    				<span class="sr-only">Toggle navigation</span>
-    				<span class="icon-bar"></span>
-    				<span class="icon-bar"></span>
-    				<span class="icon-bar"></span>
-    			</button>
-    			<a class="navbar-brand" href="<?php echo $settings["path"]; ?>"><?php echo Blog::name(); ?></a>
-    		</div>
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<?php echo $settings["path"]; ?>"><?php echo Blog::name(); ?></a>
+            </div>
 
-    		<!-- Collect the nav links, forms, and other content for toggling -->
-    		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    			<ul class="nav navbar-nav navbar-right">
-    				<?php
-					if(isset($plugins_by_name['pages']))
-					{
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <?php
+                    if(isset($plugins_by_name['pages']))
+                    {
                         global $pages;
-                		global $Language;
-                		global $settings;
+                        global $Language;
+                        global $settings;
 
-                		$html .= '<li><a href="'.$settings["path"].'">'.$Language->get('home').'</a></li>';
-                		foreach($pages as $pagelink)
-                		{
-                			if($settings['default_homepage']!=$pagelink['id']) {
-                				$html .= '<li><a href="'.$pagelink['permalink'].'">'.$pagelink['title'].'</a></li>';
+                        $html .= '<li><a href="'.$settings["path"].'">'.$Language->get('home').'</a></li>';
+                        foreach($pages as $pagelink)
+                        {
+                            if($settings['default_homepage']!=$pagelink['id']) {
+                                $html .= '<li><a href="'.$pagelink['permalink'].'">'.$pagelink['title'].'</a></li>';
                             }
-                		}
+                        }
                         echo $html;
-					}
-    				?>
-    			</ul>
-    		</div>
-    		<!-- /.navbar-collapse -->
-    	</div>
-    	<!-- /.container -->
+                    }
+                    ?>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
     </nav>
 
     <!-- View -->
@@ -91,7 +91,7 @@
     </footer>
 
     <?php
-    	// Include Javascript from theme
+        // Include Javascript from theme
         echo Blog::javascript(array('jquery.min.js', 'bootstrap.min.js', 'clean-blog.min.js'));
     ?>
 </body>

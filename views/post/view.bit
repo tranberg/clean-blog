@@ -30,22 +30,19 @@
     <div class="row">
         <div class="col-lg-12">
             <ul class="pager">
-        	<?php
+            <?php
                 $pager = $_DB_POST->prev_next_post($post['id']);
-        		if($pager['next']!=false)
-        		{
-        			$post = $pager['next'];
-
-        			echo '<li class="next"><a href="'.Post::permalink().'">'.Post::title().' →</a></li>';
-        		}
-
-        		if($pager['prev']!=false)
-        		{
-        			$post = $pager['prev'];
-
-        			echo '<li class="previous"><a href="'.Post::permalink().'">← '.Post::title().'</a></li>';
-        		}
-        	?>
+                if($pager['next']!=false)
+                {
+                    $post = $pager['next'];
+                    echo '<li class="next"><a href="'.Post::permalink().'">'.Post::title().' →</a></li>';
+                }
+                if($pager['prev']!=false)
+                {
+                    $post = $pager['prev'];
+                    echo '<li class="previous"><a href="'.Post::permalink().'">← '.Post::title().'</a></li>';
+                }
+            ?>
             </ul>
         </div>
     </div>
