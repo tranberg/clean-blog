@@ -85,7 +85,7 @@ $('#name').focus(function() {
  // * License: MIT <http://opensource.org/licenses/mit-license.php> - see LICENSE file
  // *
  // * http://ReactiveRaven.github.com/jqBootstrapValidation/
- 
+
 
 (function( $ ){
 
@@ -557,7 +557,7 @@ $('#name').focus(function() {
                 // How many errors did we find?
                 if (settings.options.semanticallyStrict && errorsFound.length === 1) {
                   // Only one? Being strict? Just output it.
-                  $helpBlock.html(errorsFound[0] + 
+                  $helpBlock.html(errorsFound[0] +
                     ( settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : "" ));
                 } else {
                   // Multiple? Being sloppy? Glue them together into an UL.
@@ -1028,5 +1028,23 @@ jQuery(document).ready(function($) {
                 }
                 this.previousTop = currentTop;
             });
+    }
+});
+
+// Count words in blog post and calculate reading time. Insert results in post header.
+// Inspired by: http://stackoverflow.com/a/21144505
+$(function () {
+    // Only run if we are on a post page
+    if (window.location.href.includes("/post/")) {
+        // Get all words in blog post
+        str = document.getElementsByTagName("article")[0].textContent;
+        // Find words and put them in an array
+        matches = str.match(/[\w\d]+/gi);
+        // Count words and return result. If no words return 0
+        words = matches ? matches.length : 0;
+        // Calculate and round reading time. Wikipedia suggests that 200 WPM is reasonable
+        readTime = Math.round(words / 200 * 10) / 10
+        // Insert word count and estimated reading time in post header
+        $("#wordCount").html(words.toString() + " words, roughly " + readTime.toString() + " minutes")
     }
 });
