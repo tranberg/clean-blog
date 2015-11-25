@@ -122,6 +122,7 @@ hr.small {
   }
   .navbar-custom.is-fixed .nav li a {
     color: #404040;
+    text-shadow: none;
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
@@ -135,9 +136,6 @@ hr.small {
     -o-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
-}
-.navbar-collapse.collapse.in .nav li a,.navbar-collapse.collapsing .nav li a {
-    text-shadow:none;
 }
 .intro-header {
   background-color: #808080;
