@@ -42,7 +42,7 @@ else
                 <h2 class="post-title"><?php echo Post::title() ?></h2>
                 <h3 class="post-subtitle"><?php echo Post::description() ?></h3>
             </a>
-            <p class="post-meta"><?php echo Post::published() ?></p>
+            <p class="post-meta"><?php echo preg_replace('/ 0/', ' ', Post::published('%B %d, %Y')); ?></p>
         </div>
         <hr>
     <?php
