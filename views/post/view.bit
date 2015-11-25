@@ -7,7 +7,9 @@
                 <div class="post-heading">
                     <h1><?php echo Post::title(); ?></h1>
                     <h2 class="subheading"><?php echo Post::description(); ?></h2>
-                    <span class="meta"><?php echo Post::published() ?></span>
+                    <span>Published on <?php echo preg_replace('/ 0/', ' ', Post::published('%B %d, %Y')); ?></span>
+                    <br>
+                    <span id="wordCount"></span>
                 </div>
             </div>
         </div>
