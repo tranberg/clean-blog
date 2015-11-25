@@ -137,6 +137,7 @@ hr.small {
     transform: translate3d(0, 100%, 0);
   }
 }
+.navbar-collapse.collapse.in .nav li a,.navbar-collapse.collapsing .nav li a{text-shadow:none;}
 .intro-header {
   background-color: #808080;
   background: no-repeat center center;
