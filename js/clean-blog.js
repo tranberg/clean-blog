@@ -1035,7 +1035,7 @@ jQuery(document).ready(function($) {
 // Inspired by: http://stackoverflow.com/a/21144505
 $(function () {
     // Only run if we are on a post page
-    if (window.location.href.includes("/post/")) {
+    if (window.location.pathname.indexOf("/post/") != -1) {
         // Get all words in blog post
         str = document.getElementsByTagName("article")[0].textContent;
         // Find words and put them in an array
@@ -1045,6 +1045,10 @@ $(function () {
         // Calculate and round reading time. Wikipedia suggests that 200 WPM is reasonable
         readTime = Math.ceil(words / 200)
         // Insert estimated reading time in post header
-        $("#readTime").html("Read in less than " + readTime.toString() + " minutes")
+        if (readTime <= 1) {
+            $("#readTime").html("Read in less than " + readTime.toString() + " minute")
+        } else {
+            $("#readTime").html("Read in less than " + readTime.toString() + " minutes")
+        }
     }
 });
