@@ -1052,3 +1052,8 @@ $(function () {
         }
     }
 });
+
+// Fix syntax highlighting by copying data from an attribute to a class. Necessary since the highlight library looks for: class="<language>", but Nibbleblog creates: data-language="<language>".
+$("code").each(function () {
+    $(this).addClass($(this).attr('data-language'));
+});
