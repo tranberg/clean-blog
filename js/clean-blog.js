@@ -1060,6 +1060,6 @@ $("code").each(function () {
     if (language == 'shell') {
         $(this).addClass('bash');
     } else {
-        $(this).addClass($(this).attr('data-language'));
+        $(this).addClass(language);
     }
 });
