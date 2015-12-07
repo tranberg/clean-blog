@@ -9,7 +9,8 @@ Have a look at the [original license](https://github.com/IronSummitMedia/startbo
 
 Features
 --------
-- A post's description is shown as a sub-heading
+- A post's (optional) description is shown as a sub-heading
+- [Estimated reading time](http://tberg.dk/post/word-count/) is shown in the header
 - To make an image responsive add this to its source in the editor: class="img-responsive"
 
 Install
