@@ -12,6 +12,7 @@ Features
 - A post's (optional) description is shown as a sub-heading
 - [Estimated reading time](http://tberg.dk/post/word-count/) is shown in the header
 - To make an image responsive add this to its source in the editor: class="img-responsive"
+- Syntax highlighting using [highlight.js](https://highlightjs.org/). The style used is *tomorrow*, which can be changed by replacing *css/tomorrow.css* with another style.
 
 Install
 -------
