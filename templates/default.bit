@@ -9,7 +9,7 @@
     echo Blog::meta_tags();
 
     // Include CSS from theme
-    echo Blog::css(array('bootstrap.min.css', 'clean-blog.css'));
+    echo Blog::css(array('bootstrap.min.css', 'clean-blog.css', 'tomorrow.css'));
 
     // Include Favicon, default path: themes/css/img/favicon.ico
     echo Blog::favicon();
@@ -92,7 +92,8 @@
 
     <?php
         // Include Javascript from theme
-        echo Blog::javascript(array('jquery.min.js', 'bootstrap.min.js', 'clean-blog.js'));
+        echo Blog::javascript(array('jquery.min.js', 'bootstrap.min.js', 'clean-blog.js', 'highlight.pack.js'));
     ?>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

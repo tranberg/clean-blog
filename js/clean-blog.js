@@ -1052,3 +1052,14 @@ $(function () {
         }
     }
 });
+
+// Fix syntax highlighting by copying data from an attribute to a class. Necessary since the highlight library looks for: class="<language>", but Nibbleblog creates: data-language="<language>".
+$("code").each(function () {
+    var language = $(this).attr('data-language')
+    // Rename since highlighter recognizes shell as bash:
+    if (language == 'shell') {
+        $(this).addClass('bash');
+    } else {
+        $(this).addClass(language);
+    }
+});
