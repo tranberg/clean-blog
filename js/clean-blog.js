@@ -1045,11 +1045,7 @@ $(function () {
         // Calculate and round reading time. Wikipedia suggests that 200 WPM is reasonable
         readTime = Math.ceil(words / 200)
         // Insert estimated reading time in post header
-        if (readTime <= 1) {
-            $("#readTime").html("Read in less than " + readTime.toString() + " minute")
-        } else {
-            $("#readTime").html("Read in less than " + readTime.toString() + " minutes")
-        }
+        $("#readTime").html(readTime.toString() + " minute read")
     }
 });
 

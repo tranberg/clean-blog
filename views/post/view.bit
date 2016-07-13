@@ -7,7 +7,7 @@
                 <div class="post-heading">
                     <h1><?php echo Post::title(); ?></h1>
                     <h2 class="subheading"><?php echo Post::description(); ?></h2>
-                    <span>Published on <?php echo preg_replace('/ 0/', ' ', Post::published('%B %d, %Y')); ?></span>
+                    <span><?php echo preg_replace('/ 0/', ' ', Post::published('%B %d, %Y')); ?></span>
                     <br>
                     <span id="readTime"></span>
                 </div>
